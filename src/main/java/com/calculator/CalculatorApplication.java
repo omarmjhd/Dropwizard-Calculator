@@ -8,7 +8,7 @@ import com.calculator.resources.AdditionResource;
 import com.calculator.resources.SubtractionResource;
 import com.calculator.resources.MultiplicationResource;
 import com.calculator.resources.DivisionResource;
-
+import com.calculator.resources.CalculatorResource;
 
 import com.calculator.health.AdditionHealthCheck;
 import com.calculator.health.SubtractionHealthCheck;
@@ -38,6 +38,7 @@ public class CalculatorApplication extends Application<CalculatorConfiguration> 
         final SubtractionResource subtractionResource = new SubtractionResource();
         final MultiplicationResource multiplicationResource = new MultiplicationResource();
         final DivisionResource divisionResource = new DivisionResource();
+        final CalculatorResource calculatorResource = new CalculatorResource();
 
         final AdditionHealthCheck additionHealthCheck = new AdditionHealthCheck(additionResource);
         environment.healthChecks().register("Addition HealthCheck", additionHealthCheck);
@@ -55,5 +56,6 @@ public class CalculatorApplication extends Application<CalculatorConfiguration> 
         environment.jersey().register(subtractionResource);
         environment.jersey().register(multiplicationResource);
         environment.jersey().register(divisionResource);
+        environment.jersey().register(calculatorResource);
     }
 }

@@ -14,8 +14,8 @@ public class MultiplicationHealthCheck extends HealthCheck {
     @Override
     protected Result check() throws Exception {
 
-        if (resource.multiplyValues(5, 5).getResult() != 1) {
-            return Result.unhealthy("MultiplicationResource is not summing correctly");
+        if (resource.multiplyValues(5, 5).getResult() != 25) {
+            return Result.unhealthy("MultiplicationResource is not multiplying correctly");
         }
 
         if (!resource.multiplyValues(1, 1).getOperation().equals("*")) {

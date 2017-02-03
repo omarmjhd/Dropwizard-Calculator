@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class MultiplicationResource {
 
-    public MultiplicationResource() {
+    public MultiplicationResource() { //According to Milo, this Resource shouldnt be driving the operations, but rather just connect to a service that interfaces with a DB or something of the like to pull a result
     }
 
     @GET
