@@ -1,5 +1,6 @@
 package com.calculator;
 
+import com.calculator.health.CalculatorHealthCheck;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -51,6 +52,9 @@ public class CalculatorApplication extends Application<CalculatorConfiguration> 
 
         final DivisionHealthCheck divisionHealthCheck = new DivisionHealthCheck(divisionResource);
         environment.healthChecks().register("Division HealthCheck", divisionHealthCheck);
+
+        final CalculatorHealthCheck calculatorHealthCheck = new CalculatorHealthCheck(calculatorResource);
+        environment.healthChecks().register("Calculator HealthCheck", calculatorHealthCheck);
 
         environment.jersey().register(additionResource);
         environment.jersey().register(subtractionResource);

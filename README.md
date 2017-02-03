@@ -1,5 +1,40 @@
 # Dropwizard-Calculator
-Basic calculator built as an extended introduction to Dropwizard
+This is a basic calculator I built as an extended introduction to Dropwizard.
+
+##Running the Project
+
+This project is built as a Maven packaged Java project, so after cloning the repo, it can be packaged into a jar by running
+
+```
+mvn package
+```
+
+Once the project is packaged, it can be run using the following command
+
+```
+java -jar target/calculator-2.0-SNAPSHOT.jar server
+```
+
+After that command is run, the server should be up and active, and can be accessed at 
+
+[http://localhost:8080/calculator](http://localhost:8080/calculator)
+
+##Functionality
+
+The calculator operations available are as follows:
+
+| Operation     | Parameters                | Endpoint  |
+| ------------- |:-------------------------:| -----:|
+| Addition      | operation, value1, value2 | [http://localhost:8080/calculator?operation=add&value1=1&value2=5](http://localhost:8080/calculator?operation=add&value1=1&value2=5) |
+| Subtraction   | operation, value1, value2 | [http://localhost:8080/calculator?operation=subtract&value1=1&value2=5](http://localhost:8080/calculator?operation=subtract&value1=1&value2=5) |
+| Multiplication| operation, value1, value2 | [http://localhost:8080/calculator?operation=multiply&value1=1&value2=5](http://localhost:8080/calculator?operation=multiply&value1=1&value2=5) |
+| Division      | operation, value1, value2 | [http://localhost:8080/calculator?operation=divide&value1=1&value2=5](http://localhost:8080/calculator?operation=add&value1=1&value2=5) |
+
+Additionally, Dropwizard HealthCheck's have been added to the project, and can be accessed at:
+
+[http://localhost:8081/healthcheck](http://localhost:8081/healthcheck)
+
+##Version History
 
 Version 1.0 implements the calculator functionality within the Operation Resources and can be accessed by the following endpoint
 
@@ -9,3 +44,6 @@ Version 2.0 maintains the functionality of version 1.0 but also seperates the ca
 
 [http://localhost:8080/calculator?operation=add&value1=1&value2=5](http://localhost:8080/calculator?operation=add&value1=1&value2=5)
 
+To view the HealthCheck's for the application, hit the following link
+
+[http://localhost:8081/healthcheck](http://localhost:8081/healthcheck)
