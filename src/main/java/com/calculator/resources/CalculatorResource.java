@@ -1,7 +1,7 @@
 package com.calculator.resources;
 
 
-import com.calculator.api.ResultRepresentation;
+import com.calculator.representations.ResultRepresentation;
 import com.calculator.services.CalculatorService;
 import com.codahale.metrics.annotation.Timed;
 import javax.ws.rs.GET;

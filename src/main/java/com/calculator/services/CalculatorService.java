@@ -1,6 +1,6 @@
 package com.calculator.services;
 
-import com.calculator.api.ResultRepresentation;
+import com.calculator.representations.ResultRepresentation;
 
 public class CalculatorService {
 

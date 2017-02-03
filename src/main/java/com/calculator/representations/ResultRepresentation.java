@@ -1,4 +1,4 @@
-package com.calculator.api;
+package com.calculator.representations;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
