@@ -71,5 +71,13 @@
     <orderEntry type="library" name="Maven: net.sourceforge.argparse4j:argparse4j:0.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty.toolchain.setuid:jetty-setuid-java:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject:guice:3.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.hubspot.dropwizard:dropwizard-guice:0.7.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.findbugs:annotations:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-servlet:4.0-beta5" level="project" />
+    <orderEntry type="library" name="Maven: org.reflections:reflections:0.9.9" level="project" />
+    <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.2-GA" level="project" />
   </component>
 </module>

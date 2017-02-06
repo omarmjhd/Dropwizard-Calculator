@@ -1,6 +1,9 @@
 package com.calculator;
 
 import com.calculator.health.CalculatorHealthCheck;
+import com.calculator.modules.CalculatorModule;
+import com.calculator.services.CalculatorService;
+import com.google.inject.Guice;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -16,6 +19,9 @@ import com.calculator.health.SubtractionHealthCheck;
 import com.calculator.health.MultiplicationHealthCheck;
 import com.calculator.health.DivisionHealthCheck;
 
+
+import com.hubspot.dropwizard.guice.GuiceBundle;
+
 public class CalculatorApplication extends Application<CalculatorConfiguration> {
 
     public static void main(String[] args) throws Exception {
@@ -29,14 +35,21 @@ public class CalculatorApplication extends Application<CalculatorConfiguration> 
 
     @Override
     public void initialize(Bootstrap<CalculatorConfiguration> bootstrap) {
-        //nothing yet
+
+        GuiceBundle<CalculatorConfiguration> guiceBundle = GuiceBundle.<CalculatorConfiguration>newBuilder()
+                .addModule(new CalculatorModule())
+                .setConfigClass(CalculatorConfiguration.class)
+                .enableAutoConfig(getClass().getPackage().getName())
+                .build();
+
+        bootstrap.addBundle(guiceBundle);
     }
 
     @Override
-    public void run(CalculatorConfiguration configuration, Environment environment) {
+    public void run(CalculatorConfiguration configuration, Environment environment) throws Exception {
 
 
-        final CalculatorResource calculatorResource = new CalculatorResource(configuration.getCalculatorService());
+        /*final CalculatorResource calculatorResource = new CalculatorResource(configuration.getCalculatorService());
 
         final CalculatorHealthCheck calculatorHealthCheck = new CalculatorHealthCheck(calculatorResource);
 
@@ -60,7 +73,6 @@ public class CalculatorApplication extends Application<CalculatorConfiguration> 
 
         final DivisionHealthCheck divisionHealthCheck = new DivisionHealthCheck(divisionResource);
         environment.healthChecks().register("Division HealthCheck", divisionHealthCheck);
-
         final CalculatorHealthCheck calculatorHealthCheck = new CalculatorHealthCheck(calculatorResource);
         environment.healthChecks().register("Calculator HealthCheck", calculatorHealthCheck);
 

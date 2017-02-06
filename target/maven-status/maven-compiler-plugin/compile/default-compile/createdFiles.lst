@@ -11,4 +11,5 @@ com/calculator/health/MultiplicationHealthCheck.class
 com/calculator/resources/MultiplicationResource.class
 com/calculator/CalculatorConfiguration.class
 com/calculator/resources/DivisionResource.class
+com/calculator/modules/CalculatorModule.class
 com/calculator/services/CalculatorService.class
