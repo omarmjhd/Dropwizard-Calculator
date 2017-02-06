@@ -49,4 +49,4 @@ fabric.properties
 .DS_Store
 
 #target directory so as not to upload compiled files
-target/
+/target/**
