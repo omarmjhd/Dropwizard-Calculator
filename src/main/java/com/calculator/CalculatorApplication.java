@@ -35,7 +35,15 @@ public class CalculatorApplication extends Application<CalculatorConfiguration> 
     @Override
     public void run(CalculatorConfiguration configuration, Environment environment) {
 
-        final AdditionResource additionResource = new AdditionResource();
+
+        final CalculatorResource calculatorResource = new CalculatorResource(configuration.getCalculatorService());
+
+        final CalculatorHealthCheck calculatorHealthCheck = new CalculatorHealthCheck(calculatorResource);
+
+        environment.healthChecks().register("Calc healthcheck", calculatorHealthCheck);
+        environment.jersey().register(calculatorResource);
+
+        /*final AdditionResource additionResource = new AdditionResource();
         final SubtractionResource subtractionResource = new SubtractionResource();
         final MultiplicationResource multiplicationResource = new MultiplicationResource();
         final DivisionResource divisionResource = new DivisionResource();
@@ -61,5 +69,8 @@ public class CalculatorApplication extends Application<CalculatorConfiguration> 
         environment.jersey().register(multiplicationResource);
         environment.jersey().register(divisionResource);
         environment.jersey().register(calculatorResource);
+        */
+
+
     }
 }
