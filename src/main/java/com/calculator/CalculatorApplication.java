@@ -1,6 +1,7 @@
 package com.calculator;
 
 import com.calculator.health.CalculatorHealthCheck;
+import com.calculator.modules.CalculatorHealthCheckModule;
 import com.calculator.modules.CalculatorModule;
 import com.calculator.services.CalculatorService;
 import com.google.inject.Guice;
@@ -31,13 +32,13 @@ public class CalculatorApplication extends Application<CalculatorConfiguration> 
     public void run(CalculatorConfiguration configuration, Environment environment) throws Exception {
 
 
-        Injector injector = Guice.createInjector(new CalculatorModule(configuration));
+        Injector injector = Guice.createInjector(new CalculatorModule(configuration), new CalculatorHealthCheckModule(configuration));
 
         final CalculatorResource calculatorResource = injector.getInstance(CalculatorResource.class);
 
-        //final CalculatorHealthCheck calculatorHealthCheck = new CalculatorHealthCheck(calculatorResource);
+        final CalculatorHealthCheck calculatorHealthCheck = injector.getInstance(CalculatorHealthCheck.class);
 
-        //environment.healthChecks().register("Calc healthcheck", calculatorHealthCheck);
+        environment.healthChecks().register("Calc healthcheck", calculatorHealthCheck);
         environment.jersey().register(calculatorResource);
 
 
