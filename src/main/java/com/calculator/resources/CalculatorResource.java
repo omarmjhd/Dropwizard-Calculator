@@ -9,13 +9,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-
 import com.google.common.base.Optional;
 import com.google.inject.Inject;
-import com.google.inject.name.Named;
-
-
-
 
 @Path("calculator")
 @Produces(MediaType.APPLICATION_JSON)
@@ -24,7 +19,7 @@ public class CalculatorResource {
     private final CalculatorService calculatorService;
 
     @Inject
-    public CalculatorResource(@Named("calculator-service") CalculatorService calculatorService) { //According to Milo, this Resource shouldnt be driving the operations, but rather just connect to a service that interfaces with a DB or something of the like to pull a result
+    public CalculatorResource(CalculatorService calculatorService) { //According to Milo, this Resource shouldnt be driving the operations, but rather just connect to a service that interfaces with a DB or something of the like to pull a result
 
         this.calculatorService = calculatorService;
     }

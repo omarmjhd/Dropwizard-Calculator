@@ -2,12 +2,15 @@ package com.calculator.services;
 
 import com.calculator.representations.ResultRepresentation;
 import com.google.common.base.Optional;
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
 
 public class CalculatorService {
 
     private Double defaultValue;
 
-    public CalculatorService(Double defaultValue) { //no-arg constructor to create the service
+    @Inject
+    public CalculatorService(@Named("defaultDouble") Double defaultValue) {
 
         this.defaultValue = defaultValue;
 
