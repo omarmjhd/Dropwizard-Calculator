@@ -17,6 +17,6 @@ public class CalculatorModule implements Module{
     @Provides
     @Named("calculator-service")
     public CalculatorService provideCalculator(CalculatorConfiguration calculatorConfiguration) {
-        return calculatorConfiguration.getCalculatorService();
+        return new CalculatorService(calculatorConfiguration.getDefaultValue());
     }
 }

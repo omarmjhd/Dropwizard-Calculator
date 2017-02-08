@@ -1,15 +1,7 @@
 com/calculator/representations/ResultRepresentation.class
 com/calculator/resources/CalculatorResource.class
-com/calculator/resources/SubtractionResource.class
 com/calculator/CalculatorApplication.class
-com/calculator/health/CalculatorHealthCheck.class
-com/calculator/resources/AdditionResource.class
-com/calculator/health/AdditionHealthCheck.class
-com/calculator/health/SubtractionHealthCheck.class
-com/calculator/health/DivisionHealthCheck.class
-com/calculator/health/MultiplicationHealthCheck.class
-com/calculator/resources/MultiplicationResource.class
 com/calculator/CalculatorConfiguration.class
-com/calculator/resources/DivisionResource.class
+com/calculator/health/CalculatorHealthCheck.class
 com/calculator/modules/CalculatorModule.class
 com/calculator/services/CalculatorService.class

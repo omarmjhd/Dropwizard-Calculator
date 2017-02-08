@@ -1,23 +1,15 @@
 package com.calculator;
-
-import com.calculator.services.CalculatorService;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
 import javax.validation.constraints.NotNull;
 
 public class CalculatorConfiguration extends Configuration {
 
     @NotNull
-    private CalculatorService calculatorService = new CalculatorService();
+    private Double defaultValue = -5.0;
 
-    @JsonProperty
-    public CalculatorService getCalculatorService() {
-        return calculatorService;
-    }
+    public Double getDefaultValue() {
+        return defaultValue;
 
-    @JsonProperty
-    public void setCalculatorService(CalculatorService calculatorService) {
-        this.calculatorService = calculatorService;
     }
 
 }

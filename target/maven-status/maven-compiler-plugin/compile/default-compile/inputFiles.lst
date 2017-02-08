@@ -1,11 +1,7 @@
-/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/resources/SubtractionResource.java
-/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/health/SubtractionHealthCheck.java
-/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/resources/MultiplicationResource.java
+/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/modules/CalculatorModule.java
+/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/resources/CalculatorResource.java
+/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/services/CalculatorService.java
+/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/representations/ResultRepresentation.java
 /Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/CalculatorApplication.java
-/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/health/AdditionHealthCheck.java
-/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/health/DivisionHealthCheck.java
-/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/health/MultiplicationHealthCheck.java
-/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/resources/AdditionResource.java
-/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/resources/DivisionResource.java
-/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/api/ResultRepresentation.java
+/Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/health/CalculatorHealthCheck.java
 /Users/omar.mujahid/Documents/Development/IntelliJ/Dropwizard-Calculator/src/main/java/com/calculator/CalculatorConfiguration.java

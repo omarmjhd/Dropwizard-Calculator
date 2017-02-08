@@ -10,8 +10,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import com.google.common.base.Optional;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
+
+
+
 
 @Path("calculator")
 @Produces(MediaType.APPLICATION_JSON)
@@ -27,9 +31,9 @@ public class CalculatorResource {
 
     @GET
     @Timed
-    public ResultRepresentation calculate(@QueryParam("operation") String operation, @QueryParam("value1") float value1, @QueryParam("value2") float value2) { //@QueryParam("name") maps the name field in the query to name object in param
+    public ResultRepresentation calculate(@QueryParam("operation") String operation, @QueryParam("value1") Double value1, @QueryParam("value2") Double value2) { //@QueryParam("name") maps the name field in the query to name object in param
 
-        return calculatorService.calculate(operation, value1, value2);
+        return calculatorService.calculate(operation, Optional.fromNullable(value1), Optional.fromNullable(value2));
     }
 
 

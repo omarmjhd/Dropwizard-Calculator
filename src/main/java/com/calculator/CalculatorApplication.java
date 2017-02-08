@@ -8,17 +8,7 @@ import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
-import com.calculator.resources.AdditionResource;
-import com.calculator.resources.SubtractionResource;
-import com.calculator.resources.MultiplicationResource;
-import com.calculator.resources.DivisionResource;
 import com.calculator.resources.CalculatorResource;
-
-import com.calculator.health.AdditionHealthCheck;
-import com.calculator.health.SubtractionHealthCheck;
-import com.calculator.health.MultiplicationHealthCheck;
-import com.calculator.health.DivisionHealthCheck;
-
 
 import com.hubspot.dropwizard.guice.GuiceBundle;
 
