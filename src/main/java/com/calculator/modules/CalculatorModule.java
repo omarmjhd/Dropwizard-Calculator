@@ -2,12 +2,9 @@ package com.calculator.modules;
 
 import com.calculator.CalculatorConfiguration;
 import com.calculator.interfaces.CalculatorServiceInterface;
-import com.calculator.resources.CalculatorResource;
 import com.calculator.services.CalculatorService;
 import com.google.inject.AbstractModule;
-import com.google.inject.Provides;
 import com.google.inject.name.Names;
-import javax.inject.Named;
 
 public class CalculatorModule extends AbstractModule {
 
