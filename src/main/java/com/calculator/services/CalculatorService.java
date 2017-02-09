@@ -1,5 +1,6 @@
 package com.calculator.services;
 
+import com.calculator.interfaces.CalculatorServiceInterface;
 import com.calculator.representations.ResultRepresentation;
 import com.google.common.base.Optional;
 import com.google.inject.Inject;
@@ -7,13 +8,12 @@ import com.google.inject.Singleton;
 import com.google.inject.name.Named;
 
 @Singleton
-public class CalculatorService {
+public class CalculatorService implements CalculatorServiceInterface {
 
     private Double defaultValue;
 
     @Inject
     public CalculatorService(@Named("defaultDouble") Double defaultValue) {
-        System.out.println("Created Calculator Service");
         this.defaultValue = defaultValue;
 
     }

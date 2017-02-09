@@ -1,6 +1,7 @@
 package com.calculator.resources;
 
 
+import com.calculator.interfaces.CalculatorServiceInterface;
 import com.calculator.representations.ResultRepresentation;
 import com.calculator.services.CalculatorService;
 import com.codahale.metrics.annotation.Timed;
@@ -18,10 +19,10 @@ import com.google.inject.Singleton;
 @Singleton
 public class CalculatorResource {
 
-    private final CalculatorService calculatorService;
+    private final CalculatorServiceInterface calculatorService;
 
     @Inject
-    public CalculatorResource(CalculatorService calculatorService) { //According to Milo, this Resource shouldnt be driving the operations, but rather just connect to a service that interfaces with a DB or something of the like to pull a result
+    public CalculatorResource(CalculatorServiceInterface calculatorService) { //According to Milo, this Resource shouldnt be driving the operations, but rather just connect to a service that interfaces with a DB or something of the like to pull a result
         this.calculatorService = calculatorService;
     }
 
