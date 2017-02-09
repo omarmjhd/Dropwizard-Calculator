@@ -1,7 +1,6 @@
 package com.calculator;
 
 import com.calculator.health.CalculatorHealthCheck;
-import com.calculator.modules.CalculatorHealthCheckModule;
 import com.calculator.modules.CalculatorModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;

@@ -4,5 +4,6 @@ com/calculator/CalculatorApplication.class
 com/calculator/CalculatorConfiguration.class
 com/calculator/health/CalculatorHealthCheck.class
 com/calculator/modules/CalculatorModule.class
+com/calculator/interfaces/CalculatorServiceInterface.class
 com/calculator/services/CalculatorService.class
 com/calculator/modules/CalculatorHealthCheckModule.class
