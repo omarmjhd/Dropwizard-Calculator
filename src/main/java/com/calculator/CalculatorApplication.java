@@ -3,7 +3,6 @@ package com.calculator;
 import com.calculator.health.CalculatorHealthCheck;
 import com.calculator.modules.CalculatorHealthCheckModule;
 import com.calculator.modules.CalculatorModule;
-import com.calculator.services.CalculatorService;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import io.dropwizard.Application;
@@ -32,7 +31,7 @@ public class CalculatorApplication extends Application<CalculatorConfiguration> 
     public void run(CalculatorConfiguration configuration, Environment environment) throws Exception {
 
 
-        Injector injector = Guice.createInjector(new CalculatorModule(configuration), new CalculatorHealthCheckModule(configuration));
+        Injector injector = Guice.createInjector(new CalculatorModule(configuration));
 
         final CalculatorResource calculatorResource = injector.getInstance(CalculatorResource.class);
 

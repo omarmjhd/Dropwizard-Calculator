@@ -1,6 +1,7 @@
 package com.calculator.modules;
 
 import com.calculator.CalculatorConfiguration;
+import com.calculator.interfaces.CalculatorServiceInterface;
 import com.calculator.resources.CalculatorResource;
 import com.calculator.services.CalculatorService;
 import com.google.inject.AbstractModule;
@@ -17,7 +18,7 @@ public class CalculatorModule extends AbstractModule {
         //configure the parts needed for a CalculatorModule
         //double named default double that we'll assign somehow
         bindConstant().annotatedWith(Names.named("defaultDouble")).to(configuration.getDefaultValue()); //going to calculator service, saying I need defValue, getting it from config and preparing it
-        bind(CalculatorService.class);
+        bind(CalculatorServiceInterface.class).to(CalculatorService.class);
 
     }
 
